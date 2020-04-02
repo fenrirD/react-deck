@@ -14,3 +14,15 @@
 
 ### `JSX`
 - JavaScript를 확장한 문법 
+
+#### `JSX에 표현식 사용`
+```javascript
+    const name = 'Josh Perez';
+    const element = <h1>Hello, {name}</h1>;
+
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+```
+### `ClassComponent VS FunctionComponet`
