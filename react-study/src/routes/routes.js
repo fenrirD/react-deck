@@ -10,45 +10,51 @@ import React from "react"
 import {Home, About, Posts} from 'pages'
 import AboutContainer from '../pages/AboutContainer'
 import PostContainer from "../pages/PostContainer";
+import ReduxStudyListsContainer from '../containers/ReduxStudyListsContainer'
 
 const route = [
     {
         path: '/',
         name: 'Home',
         icon: Dashboard,
-        component: Home
+        component: Home,
+        root: true
     },
     {
         path: '/about/lsy',
         param: '/about/:name',
         name: 'About lsy',
         icon: LibraryBooks,
-        component: About
+        component: AboutContainer,
+        root: false
     },
     {
         path: '/redux',
         name: 'redux',
         icon: LocationOn,
-        component: () => <AboutContainer  />
+        component: () => <ReduxStudyListsContainer  />,
+        root: true
     },
     {
         path: '/about',
         name: 'About',
         icon: Person,
-        component: About
-    },
-    {
-        path: '/posts/1',
-        param: '/posts/:id',
-        name: 'Posts Id',
-        icon: BubbleChart,
-        component: () => <PostContainer/>
+        component: About,
+        root: true
     },
     {
         path: '/posts',
         name: 'Posts',
         icon: BubbleChart,
-        component: Posts
+        component: Posts,
+        root: false
+    },
+    {
+        path: '/posts/:id',
+        name: 'Posts 1',
+        icon: BubbleChart,
+        component: PostContainer,
+        root: false
     },
 
 ]

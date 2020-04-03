@@ -18,11 +18,13 @@ const useStyles = makeStyles((theme) => ({
 export default function Main() {
     const classes = useStyles()
     const renderRoute = () => (
-            <Switch>
+            // <Switch>
+        <div>
             {routes.map( route => (
-                    <Route exact path={route.param? route.param : route.path} component={route.component} key={route.name}/>
+                    <Route exact ={route.root} path={route.param? route.param : route.path} component={route.component} key={route.name}/>
             ))}
-            </Switch>
+        </div>
+            // </Switch>
 
     )
     return (

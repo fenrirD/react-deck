@@ -10,7 +10,7 @@
 
 ### `Library List`
 - Material UI https://material-ui.com/ 
-- Redux https://react-redux.js.org/ 
+- Redux https://react-ReduxStudyLists.js.org/ 
 
 ### `JSX`
 - JavaScript를 확장한 문법 

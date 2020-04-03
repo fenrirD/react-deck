@@ -12,8 +12,8 @@ class PostContainer extends Component {
     }
     render() {
         console.log(this.props)
-        const {input} = this.props
-        return <Post onChange={this.handleChange} input={input}/>
+        const {input,match} = this.props
+        return <Post onChange={this.handleChange} input={input} match={match}/>
     }
 
 

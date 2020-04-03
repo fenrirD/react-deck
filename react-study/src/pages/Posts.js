@@ -14,7 +14,7 @@ const Posts = ({match}) => {
                 <li><Link to={`${match.url}/3`}>post #3</Link></li>
                 <li><Link to={`${match.url}/4`}>post #4</Link></li>
             </ul>
-            <Route exact path={`${match.url}/:id`} component={Post} />
+
             <Route exact path={`${match.url}`} render={ () => (<h3> Plz select any Post</h3>)}/>
 
         </div>

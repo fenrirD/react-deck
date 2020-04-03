@@ -1,3 +1,5 @@
+import { call, put, fork } from 'redux-saga/effects'
+
 
 const CHANGE_NAME ='about/CHANGE_NAME'
 const INCREMENT ='about/INCREMENT'
@@ -8,9 +10,17 @@ export const changeName = name => ({
     type: CHANGE_NAME,
     name
 })
-export const increment = () => ({
-    type: INCREMENT
-})
+export const increment = (action) => {
+    console.log('action',action)
+
+   return (
+
+    {
+        type: INCREMENT,
+        payload : 1
+    }
+)
+}
 
 export const  decrement = () => ({
     type: DECREMENT
@@ -31,6 +41,7 @@ export default function about(state = initialState, action) {
                 name: action.name
             }
         case INCREMENT:
+            console.log('about increment')
             return {
                 ...state,
                 number: state.number + 1
@@ -43,4 +54,9 @@ export default function about(state = initialState, action) {
         default: return state
 
     }
+}
+
+export function* aboutSaga() {
+    console.log('saga')
+    yield fork(increment)
 }

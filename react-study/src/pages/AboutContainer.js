@@ -16,26 +16,26 @@ class AboutContainer extends Component {
         console.log(number,'in')
     }
     componentDidMount() {
-        console.log('componentDidMount')
-        const axios = require('axios')
-        var n = this
-        axios.get('http://localhost:8080/study01/hisd.do')
-            .then(function (response) {
-                // handle success
-                console.log(response.data);
-                console.log(n.state);
-                n.setState ({
-                    data: response.data
-                })
-                console.log(n.state)
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
+        // console.log('componentDidMount')
+        // const axios = require('axios')
+        // var n = this
+        // axios.get('http://localhost:8080/study01/hisd.do')
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log(response.data);
+        //         console.log(n.state);
+        //         n.setState ({
+        //             data: response.data
+        //         })
+        //         console.log(n.state)
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .finally(function () {
+        //         // always executed
+        //     });
 
     }
 
