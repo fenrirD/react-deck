@@ -16,7 +16,6 @@ public class HomeController {
 	public void test() {
 		System.out.println("hi");
 	}
-	
 	@CrossOrigin
 	@GetMapping("/hisd.do")
 	public Map<String, Object> test2() {
