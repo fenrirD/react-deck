@@ -2,6 +2,8 @@ import React from "react"
 import {makeStyles} from '@material-ui/core'
 import {Route, Switch} from "react-router-dom"
 import routes from 'routes/routes'
+import {Posts} from "../../../pages";
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -21,6 +23,7 @@ export default function Main() {
                     <Route exact path={route.param? route.param : route.path} component={route.component} key={route.name}/>
             ))}
             </Switch>
+
     )
     return (
         <main className={classes.content}>

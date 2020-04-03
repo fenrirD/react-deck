@@ -1,8 +1,10 @@
 import React from "react"
-import { Link, Route} from "react-router-dom"
+import { Link, Route ,Switch} from "react-router-dom"
 import { Post } from "pages"
+import PostContainer  from "./PostContainer"
 
 const Posts = ({match}) => {
+    console.log(match)
     return (
         <div>
             <h2>Post List</h2>
@@ -12,8 +14,8 @@ const Posts = ({match}) => {
                 <li><Link to={`${match.url}/3`}>post #3</Link></li>
                 <li><Link to={`${match.url}/4`}>post #4</Link></li>
             </ul>
-            <Route exact path={match.url} render={ () => (<h3> Plz select any Post</h3>)}/>
-            <Route path={`${match.url}/:id`} component={Post}/>
+            <Route exact path={`${match.url}/:id`} component={Post} />
+            <Route exact path={`${match.url}`} render={ () => (<h3> Plz select any Post</h3>)}/>
 
         </div>
     )

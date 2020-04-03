@@ -8,6 +8,8 @@ import Language from "@material-ui/icons/Language"
 import {NavLink} from "react-router-dom"
 import React from "react"
 import {Home, About, Posts} from 'pages'
+import AboutContainer from '../pages/AboutContainer'
+import PostContainer from "../pages/PostContainer";
 
 const route = [
     {
@@ -24,10 +26,23 @@ const route = [
         component: About
     },
     {
+        path: '/redux',
+        name: 'redux',
+        icon: LocationOn,
+        component: () => <AboutContainer  />
+    },
+    {
         path: '/about',
         name: 'About',
         icon: Person,
         component: About
+    },
+    {
+        path: '/posts/1',
+        param: '/posts/:id',
+        name: 'Posts Id',
+        icon: BubbleChart,
+        component: () => <PostContainer/>
     },
     {
         path: '/posts',

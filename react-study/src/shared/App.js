@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Route, Switch} from 'react-router-dom'
 
 import Main from 'components/structure/main/Main'
 import Header from 'components/structure/header/Header'
