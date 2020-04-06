@@ -6,13 +6,16 @@ import Notifications from "@material-ui/icons/Notifications"
 import Unarchive from "@material-ui/icons/Unarchive"
 import Language from "@material-ui/icons/Language"
 import {NavLink} from "react-router-dom"
+import Main from 'components/structure/main/Main'
 import React from "react"
-import {Home, About, Posts} from 'pages'
+import {Home, About, Posts, Login} from 'pages'
 import AboutContainer from '../pages/AboutContainer'
 import PostContainer from "../pages/PostContainer";
 import ReduxStudyListsContainer from '../containers/ReduxStudyListsContainer'
 
 const route = [
+
+
     {
         path: '/',
         name: 'Home',

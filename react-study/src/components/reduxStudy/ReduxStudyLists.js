@@ -23,25 +23,24 @@ const useStyle = makeStyles({
     }
 })
 
-const ReduxStudyLists =  ({lists}) => {
+const ReduxStudyLists =  ({lists,onClickTitle}) => {
     const classes = useStyle()
-    console.log(classes.root)
+    console.log(onClickTitle)
 
     return (
         <Grid container className={classes.grid} spacing={3}>
 
-
         {lists && lists.map( (lists,idx) =>(
             <Grid item xs={3} key={idx}>
                 <Card className={classes.root}  id={`${idx} 1 `}>
-                    <CardActionArea>
+                    <CardActionArea onClick={ ()=> onClickTitle(lists.id)} >
                         <CardMedia
                             className={classes.media}
                             image="/logo192.png"
                             title="Contemplative Reptile"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography  component="p">
                                 {lists.title}
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">

@@ -7,6 +7,7 @@ import {tomorrowNightEighties} from "react-syntax-highlighter/dist/cjs/styles/hl
 
 
 const Home = () => {
+    console.log('home')
     return (
         <Paper elevation={3} >
             <Typography variant='h4'> ● 컴포넌트 라이프 사이클 </Typography>

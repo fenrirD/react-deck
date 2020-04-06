@@ -6,8 +6,9 @@ import Post from "./Post"
 
 class PostContainer extends Component {
     handleChange = e => {
-        console.log(this.props)
+
         const { PostActions } = this.props
+        console.log(PostActions)
         PostActions.changeInput(e.target.value)
     }
     render() {

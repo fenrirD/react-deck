@@ -38,6 +38,7 @@ export default function SideBar() {
             <List>
             {
                 routes.map( route => (
+                    route.app ? null :
                     <NavLink to={route.path} key={route.name} style={{ textDecoration: 'none'}}>
                         <ListItem button key={route.name}>
                             <ListItemIcon><route.icon/></ListItemIcon>

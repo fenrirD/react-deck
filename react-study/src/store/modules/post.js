@@ -7,6 +7,7 @@ const CHANGE_INPUT2 = 'posts/CHANGE_INPUT2'
 
 export const changeInput = createAction(CHANGE_INPUT, text => {
     console.log('change input')
+    console.log(text)
     return text
 })
 
@@ -69,7 +70,7 @@ export default handleActions(
 )
 
 export function* postSaga(){
-    console.log('saga start!')
+
     // fork -> saga 가 등록되고 실행됨.
     yield fork(changeInputAsync)
 }

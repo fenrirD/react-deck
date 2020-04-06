@@ -1,19 +1,27 @@
 import React, {Component} from 'react'
 
 import Main from 'components/structure/main/Main'
-import Header from 'components/structure/header/Header'
-import SideBar from "components/structure/left/SideBar"
+import {Home, About, Posts, Login} from 'pages'
+import {Route, Switch} from "react-router-dom";
+
+
 
 export default class App extends Component {
+    componentDidMount() {
+        console.log('component')
+        console.log(this.props)
+
+    }
+
+
     render() {
-
         return (
-            <div style={{display:'flex'}}>
-                <Header />
-                <SideBar/>
-                <Main/>
-            </div>
-
+                <div>
+                    <Switch>
+                        <Route exact path={'/login'} component={Login}/>
+                        <Route path={'/'} component={Main}/>
+                    </Switch>
+                </div>
         )
     }
 }
