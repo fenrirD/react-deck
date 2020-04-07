@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import {withStyles} from '@material-ui/core'
-import {Route, Switch} from "react-router-dom"
+import {Route, Switch, Redirect} from "react-router-dom"
 import routes from 'routes/routes'
 import {Posts,Login} from "../../../pages";
 import HeaderContainer from "../../../containers/HeaderContainer";
