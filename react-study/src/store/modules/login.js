@@ -26,7 +26,7 @@ const loginApi  = function* (action) {
     //         n.setState ({
     //             data: response.data
     //         })
-    //         console.log(n.state)
+    //         console.log(n.state)d
     //     })
     //     .catch(function (error) {
     //         // handle error
