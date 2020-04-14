@@ -15,7 +15,6 @@ class HeaderContainer extends Component {
 
     renderLoginDialogContainer = () =>{
         const {open} = this.props
-        console.log(this.props)
 
         return (
             <LoginDialogContainer open={open}/>
@@ -23,11 +22,12 @@ class HeaderContainer extends Component {
 
     }
     render() {
-        const {LoginDialogActions} = this.props
+
+        const {LoginDialogActions, userId} = this.props
         console.log(LoginDialogActions, this.props)
         return (
             <div>
-               <Header openDialog={LoginDialogActions.openDialog}/>
+               <Header userId={userId}/>
                {this.renderLoginDialogContainer()}
             </div>
         )
@@ -35,9 +35,12 @@ class HeaderContainer extends Component {
 }
 
 export default connect(
-    ({loginDialog}) => ({
-        open: loginDialog.open
-    }),
+    ({loginDialog, login}) => {
+        return ({
+            open: loginDialog.open,
+            userId: login.user.id
+        })
+    },
     dispatch => ({
         LoginDialogActions: bindActionCreators(loginDialogActions,dispatch)
     })

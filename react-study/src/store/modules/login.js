@@ -80,7 +80,6 @@ export default handleActions(
                 ...state,
                 user :{
                     ...state.user,
-                    id : '',
                     status : action.payload.status
 
                 }

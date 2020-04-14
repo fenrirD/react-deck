@@ -20,13 +20,11 @@ const useStyle = makeStyles((theme) => ({
     },
 }))
 
-export default function Header({openDialog}) {
+export default function Header({userId}) {
 
     const classes = useStyle()
 
-
-
-    console.log(openDialog)
+    console.log(userId)
     return (
         <div>
             <CssBaseline />
@@ -38,10 +36,16 @@ export default function Header({openDialog}) {
                     <Typography variant="h6" className={classes.title}>
                         News
                     </Typography>
-                    <NavLink to={'/login'}  style={{ textDecoration: 'none'}}>
-                        {/*<Button color="inherit" onClick={openDialog} >Login</Button>*/}
-                        <Button color="inherit" >Login</Button>
-                    </NavLink>
+                    {
+                        userId ?
+                            <Button color="inherit" > {userId}님 환영합니다.</Button>
+                            :
+                            <NavLink to={'/login'}  style={{ textDecoration: 'none'}}>
+                                {/*<Button color="inherit" onClick={openDialog} >Login</Button>*/}
+                                <Button color="inherit" >Login</Button>
+                            </NavLink>
+                    }
+
 
                 </Toolbar>
             </AppBar>
